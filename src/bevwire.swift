@@ -58,7 +58,7 @@ public class Bevwire {
         return try JSONSerialization.jsonObject(with: data)
     }
 
-    public func search_companies(query: String,limit: Int) async throws -> Any {
+    public func searchCompanies(query: String,limit: Int) async throws -> Any {
         return try await fetchJSON(from: "\(api)/companies/search?q=\(query)&limit=\(limit)")
     }
 }
