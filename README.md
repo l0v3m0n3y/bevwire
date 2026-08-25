@@ -6,7 +6,7 @@ import Foundation
 let client = Bevwire()
 
 do {
-    let companies = try await client.search_companies(query: "sierra",limit:3)
+    let companies = try await client.searchCompanies(query: "sierra",limit:3)
     print(companies)
 } catch {
     print("Error: \(error)")
@@ -15,6 +15,5 @@ do {
 
 # Launch (your script)
 ```
-swiftc -o bevwire bevwire.swift main.swift
-./bevwire
+swift run
 ```
